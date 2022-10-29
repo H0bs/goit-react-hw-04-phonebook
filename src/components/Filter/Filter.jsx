@@ -1,4 +1,4 @@
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { FilterInput } from './Filter.styled'
 
 export const Filter = ({filter, onChangeFilter}) => {
@@ -15,7 +15,7 @@ export const Filter = ({filter, onChangeFilter}) => {
   )
 }
 
-Filter.prototype = {
-  filter: string.array,
-  onChangeFilter: PropTypes.func,
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onChangeFilter: PropTypes.func.isRequired,
 }
